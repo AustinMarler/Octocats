@@ -18,6 +18,8 @@ span.image-number {
     align-self: flex-start;
     padding: 5px;
     color: rgb(207, 204, 200);
+    position: relative;
+    top: 31px;
 }
 
 .octodex {
@@ -30,18 +32,11 @@ span.image-number {
     flex-direction: column;
 }
 
-/**
-.image-footer {
-    display: flex;
-}
-*/
-
 .image-caption {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    /**width: 200px;*/
-}
+ }
 
 div img {
     width: 30px;
@@ -67,16 +62,16 @@ li.octocat > a > img {
     height: 400px;
 }
 
-li.octocat::before {
+.image-footer::after {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 10px 10px 0 10px;
     border-color: rgb(202, 202, 202) transparent transparent transparent;
     content: "";
-    position: absolute;
-    top: 435px;
-    left: 444px;
+    position: relative;
+    bottom: 47px;
+    left: 375px;
 
 }
 
@@ -86,4 +81,23 @@ li.octocat::after {
     background-color: lightgray;
     content: "";
     margin-top: 20px;
+}
+
+div.image-caption > span, div.image-caption > a {
+    position: relative;
+    left: 38px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.authors {
+    position: relative;
+    top: 7px;
+}
+
+span, a {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
